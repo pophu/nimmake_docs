@@ -1,0 +1,34 @@
+site_name: Nimmake Docs
+
+theme:
+  name: readthedocs
+  custom_dir: overrides
+
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: en
+          name: English
+          default: true
+          site_name: My Docs
+        - locale: zh
+          name: 中文
+          site_name: Nimmake 文档
+          nav_translations:
+            Home: 首页
+            BasicUsage: 基本使用
+            AdvancedUsage: 高级用法
+            SourceCode: 源代码
+            Contributing: 贡献
+            Params: 参数
+            About: 关于
+
+nav:
+  - Home: index.md
+  - BasicUsage: usage.md
+  - AdvancedUsage: advanced.md
+  - SourceCode: source.md
+  - Contributing: contributing.md
+  - Params: params.md
+  - About: about.md
