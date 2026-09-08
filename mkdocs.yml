@@ -11,7 +11,7 @@ plugins:
         - locale: en
           name: English
           default: true
-          site_name: My Docs
+          site_name: Nimmake Docs
         - locale: zh
           name: 中文
           site_name: Nimmake 文档
