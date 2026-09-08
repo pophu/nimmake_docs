@@ -1,7 +1,7 @@
-# about Nimmake
+# 关于 Nimmake
 
-A Nimble cross-platform build tool optimized for ARM and RISC-V architectures.
+一款专为 ARM 和 RISC-V 架构优化的轻量级跨平台构建工具。
 
-## Contact
+## 联系方式
 
 pophu@126.com
