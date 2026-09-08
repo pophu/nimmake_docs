@@ -97,13 +97,19 @@
         {%- endif %}
         </a>
       {%- endblock %}
-      {% if i18n_build_languages and i18n_build_languages|length > 1 %}
+      {% if i18n_config and i18n_config.languages and i18n_config.languages|length > 1 %}
+      <div style="text-align: center; padding: 6px 0;">
+        {% for lang_config in i18n_config.languages %}
+        <a href="{{ lang_config.link }}" style="color: #fcfcfc; padding: 2px 6px; {% if lang_config.locale == i18n_page_locale %}font-weight: bold; border-bottom: 2px solid #2980B9;{% endif %}">{{ lang_config.name }}</a>
+        {% endfor %}
+      </div>
+      {% elif i18n_build_languages and i18n_build_languages|length > 1 %}
       <div style="text-align: center; padding: 6px 0;">
         {% for lang in i18n_build_languages %}
         {% if lang == 'en' %}
-        <a href="/" style="color: #fcfcfc; padding: 2px 6px; {% if lang == i18n_current_language %}font-weight: bold; border-bottom: 2px solid #2980B9;{% endif %}">English</a>
+        <a href="/" style="color: #fcfcfc; padding: 2px 6px; {% if lang == i18n_page_locale %}font-weight: bold; border-bottom: 2px solid #2980B9;{% endif %}">English</a>
         {% elif lang == 'zh' %}
-        <a href="/zh/" style="color: #fcfcfc; padding: 2px 6px; {% if lang == i18n_current_language %}font-weight: bold; border-bottom: 2px solid #2980B9;{% endif %}">中文</a>
+        <a href="/zh/" style="color: #fcfcfc; padding: 2px 6px; {% if lang == i18n_page_locale %}font-weight: bold; border-bottom: 2px solid #2980B9;{% endif %}">中文</a>
         {% endif %}
         {% endfor %}
       </div>

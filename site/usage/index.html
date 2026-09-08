@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://nimmake-docs.readthedocs.io/usage/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://nimmake-docs.readthedocs.io/en/latest/usage/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
     <title>BasicUsage - Nimmake Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
@@ -14,7 +14,7 @@
         // Current page data
         var mkdocs_page_name = "BasicUsage";
         var mkdocs_page_input_path = "usage.md";
-        var mkdocs_page_url = "/usage/";
+        var mkdocs_page_url = "/en/latest/usage/";
       </script>
     
     <!--[if lt IE 9]>
@@ -33,9 +33,12 @@
           <a href=".." class="icon icon-home"> Nimmake Docs
         </a>
       
-      <div style="text-align: center; padding: 6px 0; color: #fcfcfc;">
-        <a href="/" style="color: #fcfcfc; padding: 2px 6px;">English</a>
-        <a href="/zh/" style="color: #fcfcfc; padding: 2px 6px;">中文</a>
+      <div style="text-align: center; padding: 6px 0;">
+        
+        <a href="/en/latest/" style="color: #fcfcfc; padding: 2px 6px; font-weight: bold; border-bottom: 2px solid #2980B9;">English</a>
+        
+        <a href="/en/latest/zh/" style="color: #fcfcfc; padding: 2px 6px; ">中文</a>
+        
       </div>
       <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -108,26 +111,26 @@
               
                 <h1 id="basicusage">BasicUsage</h1>
 <h2 id="chip">chip</h2>
-<p>编译依赖芯片的类型，例如arch,fpu float等。
-nimmake内置大量芯片类型，您无需手动设置。您只需要指定芯片类型即可。</p>
-<p>例子1: cpu类型定义</p>
+<p>The compilation depends on the chip type, such as arch, fpu, float, etc.
+Nimmake has built-in extensive chip types, so you don't need to configure them manually. You only need to specify the chip type.</p>
+<p>Example 1: CPU type definition</p>
 <pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
 CFG = CORTEX_M4_CFG.clone()
 hlp.Config(CFG)
 </code></pre>
-<p>例子2： 厂商型号定义</p>
+<p>Example 2: Vendor model definition</p>
 <pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
 CFG = VENDOR_MODEL_OF(Vendor.ST, &quot;STM32F407&quot;)
 hlp.Config(CFG)
 </code></pre>
-<p>例子3： 外部toml文件定义
+<p>Example 3: External TOML file definition
 NIMMAKE_CFG.toml</p>
 <pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
 hlp.TOML()
 </code></pre>
 <h2 id="toolchain-and-tool-path">toolchain and tool path</h2>
-<p>如果工具链以及全局安装，您无需设置工具链目录。
-系统默认工具链为gcc, 如果您使用的gcc,也无需设置工具链。否则您需要设置工具链及工具链的前缀。</p>
+<p>If the toolchain is globally installed, you don't need to set the toolchain directory.
+The system default toolchain is gcc; if you are using gcc, you also don't need to set the toolchain. Otherwise, you need to set the toolchain and toolchain prefix.</p>
 <pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
 from nimmake.Helper import Helper
 

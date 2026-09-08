@@ -2,10 +2,10 @@
 
 ## chip
 
-编译依赖芯片的类型，例如arch,fpu float等。
-nimmake内置大量芯片类型，您无需手动设置。您只需要指定芯片类型即可。
+The compilation depends on the chip type, such as arch, fpu, float, etc.
+Nimmake has built-in extensive chip types, so you don't need to configure them manually. You only need to specify the chip type.
 
-例子1: cpu类型定义
+Example 1: CPU type definition
 
 ```py
 from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
@@ -13,7 +13,7 @@ CFG = CORTEX_M4_CFG.clone()
 hlp.Config(CFG)
 ```
 
-例子2： 厂商型号定义
+Example 2: Vendor model definition
 
 ```py
 from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
@@ -21,7 +21,7 @@ CFG = VENDOR_MODEL_OF(Vendor.ST, "STM32F407")
 hlp.Config(CFG)
 ```
 
-例子3： 外部toml文件定义
+Example 3: External TOML file definition
 NIMMAKE_CFG.toml
 
 ```py
@@ -31,8 +31,8 @@ hlp.TOML()
 
 ## toolchain and tool path
 
-如果工具链以及全局安装，您无需设置工具链目录。
-系统默认工具链为gcc, 如果您使用的gcc,也无需设置工具链。否则您需要设置工具链及工具链的前缀。
+If the toolchain is globally installed, you don't need to set the toolchain directory.
+The system default toolchain is gcc; if you are using gcc, you also don't need to set the toolchain. Otherwise, you need to set the toolchain and toolchain prefix.
 
 ```py
 from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF

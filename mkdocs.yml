@@ -1,5 +1,5 @@
 site_name: Nimmake Docs
-site_url: https://nimmake-docs.readthedocs.io/
+site_url: https://nimmake-docs.readthedocs.io/en/latest/
 
 theme:
   name: readthedocs
@@ -12,9 +12,11 @@ plugins:
         - locale: en
           name: English
           default: true
+          link: /en/latest/
           site_name: Nimmake Docs
         - locale: zh
           name: 中文
+          link: /en/latest/zh/
           site_name: Nimmake 文档
           nav_translations:
             Home: 首页
