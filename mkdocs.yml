@@ -8,11 +8,11 @@ plugins:
   - search
   - i18n:
       languages:
-        - locale: en
+        en:
           name: English
           default: true
           site_name: My Docs
-        - locale: zh
+        zh:
           name: 中文
           site_name: Nimmake 文档
           nav_translations:
