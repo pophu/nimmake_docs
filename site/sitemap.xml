@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
+        <loc>https://nimmake-docs.readthedocs.io/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/"/>
     </url>
     <url>
-        <loc>Noneabout/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/about/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/about/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/about/"/>
     </url>
     <url>
-        <loc>Noneadvanced/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/advanced/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneadvanced/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/advanced/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/advanced/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/advanced/"/>
     </url>
     <url>
-        <loc>Nonecontributing/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/contributing/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonecontributing/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/contributing/"/>
     </url>
     <url>
-        <loc>Noneparams/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/params/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneparams/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/params/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/params/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/params/"/>
     </url>
     <url>
-        <loc>Nonesource/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/source/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonesource/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/source/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/source/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/source/"/>
     </url>
     <url>
-        <loc>Noneusage/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/usage/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/usage/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/usage/"/>
     </url>
     <url>
-        <loc>Nonezh/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/zh/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/"/>
     </url>
     <url>
-        <loc>Nonezh/about/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/zh/about/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/about/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/about/"/>
     </url>
     <url>
-        <loc>Nonezh/advanced/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/zh/advanced/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/advanced/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneadvanced/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/advanced/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/advanced/"/>
     </url>
     <url>
-        <loc>Nonezh/contributing/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/zh/contributing/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/contributing/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonecontributing/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/contributing/"/>
     </url>
     <url>
-        <loc>Nonezh/params/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/zh/params/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/params/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneparams/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/params/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/params/"/>
     </url>
     <url>
-        <loc>Nonezh/source/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/zh/source/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/source/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonesource/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/source/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/source/"/>
     </url>
     <url>
-        <loc>Nonezh/usage/</loc>
+        <loc>https://nimmake-docs.readthedocs.io/zh/usage/</loc>
         <lastmod>2026-09-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/usage/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://nimmake-docs.readthedocs.io/zh/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nimmake-docs.readthedocs.io/usage/"/>
     </url>
 </urlset>
