@@ -52,9 +52,13 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">基本使用</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_2">编译标志</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">芯片类型</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">如何修改编译标志</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">工具链及工具链目录</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">编译标志</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">如何修改编译标志</a>
     </li>
     </ul>
                 </li>
@@ -103,7 +107,45 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="_1">基本用法</h1>
-<h2 id="_2">编译标志</h2>
+<h2 id="_2">芯片类型</h2>
+<p>编译依赖芯片的类型，例如arch,fpu float等。
+nimmake内置大量芯片类型，您无需手动设置。您只需要指定芯片类型即可。</p>
+<p>例子1: cpu类型定义</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
+CFG = CORTEX_M4_CFG.clone()
+hlp.Config(CFG)
+</code></pre>
+<p>例子2： 厂商型号定义</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
+CFG = VENDOR_MODEL_OF(Vendor.ST, &quot;STM32F407&quot;)
+hlp.Config(CFG)
+</code></pre>
+<p>例子3： 外部toml文件定义
+NIMMAKE_CFG.toml</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
+hlp.TOML()
+</code></pre>
+<h2 id="_3">工具链及工具链目录</h2>
+<p>如果工具链以及全局安装，您无需设置工具链目录。
+系统默认工具链为gcc, 如果您使用的gcc,也无需设置工具链。否则您需要设置工具链及工具链的前缀。</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
+from nimmake.Helper import Helper
+
+toolpath_armgcc = r&quot;D:\LLVM\arm-none-eabi-gcc14\bin&quot;
+tool = &quot;gcc&quot;
+prefix = &quot;arm-none-eabi-&quot;
+
+print(&quot;== Welcome to  Nimmake! ==&quot;)
+hlp = Helper()
+
+CFG = CORTEX_M4_CFG.clone()
+hlp.Config(CFG)
+
+hlp.Update({&quot;TOOLPATH&quot;: toolpath_armgcc, &quot;TOOL&quot;: tool, &quot;TOOL_PREFIX&quot;: prefix})
+
+hlp.Refresh()
+</code></pre>
+<h2 id="_4">编译标志</h2>
 <p>在你的源码目录中新建 Makefile.py 文件。
 在此文件中设置工具链信息和工具路径，并指定 CPU 架构。Nimmake 将帮助你获取编译标志。</p>
 <p>你可以通过打印 hlp.Flags 来获取编译标志，并在输出中检查这些标志。</p>
@@ -132,7 +174,7 @@ print(&quot;====== 01 ==========&quot;)
 print(hlp.Flags)
 print(&quot;====== 01 ==========&quot;)
 </code></pre>
-<h2 id="_3">如何修改编译标志</h2>
+<h2 id="_5">如何修改编译标志</h2>
 <ol>
 <li>你可以通过 set_cfg 函数修改工具链标志。</li>
 </ol>
@@ -150,7 +192,7 @@ hlp.set_cfg("cpu", "cortex-m4")</p>
    hlp.Update(toolchain)
    hlp.Update({"TOOLPATH": toolpath_armgcc, "TOOL": tool, "TOOL_PREFIX": prefix})
    print(TOOL_OF(tool, prefix))</p>
-<h1 id="_4">如何添加源码</h1>
+<h1 id="_6">如何添加源码</h1>
 <p>我们通过类似第三方库的模式添加源码。把外部目录或自己定义的目录作为一个 party，添加整个 party。</p>
 <ol>
 <li>自动搜索指定扩展名的文件作为源码。</li>
@@ -166,7 +208,7 @@ hlp.set_cfg("cpu", "cortex-m4")</p>
     defines={&quot;STM32F407xx&quot;: &quot;&quot;, &quot;USE_HAL_DRIVER&quot;: &quot;&quot;}
 )
 </code></pre>
-<h2 id="_5">设置目标</h2>
+<h2 id="_7">设置目标</h2>
 <p>你可以添加包含源文件的目标。可以添加多个目标，但需要设置默认目标。</p>
 <pre><code>srcs = [
     &quot;src_stm/startup_stm32f407xx.s&quot;,

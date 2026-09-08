@@ -52,6 +52,10 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">BasicUsage</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#chip">chip</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#toolchain-and-tool-path">toolchain and tool path</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#compile-flags">compile flags</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#how-to-modify-flags">how to modify flags</a>
@@ -103,6 +107,44 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="basicusage">BasicUsage</h1>
+<h2 id="chip">chip</h2>
+<p>编译依赖芯片的类型，例如arch,fpu float等。
+nimmake内置大量芯片类型，您无需手动设置。您只需要指定芯片类型即可。</p>
+<p>例子1: cpu类型定义</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
+CFG = CORTEX_M4_CFG.clone()
+hlp.Config(CFG)
+</code></pre>
+<p>例子2： 厂商型号定义</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
+CFG = VENDOR_MODEL_OF(Vendor.ST, &quot;STM32F407&quot;)
+hlp.Config(CFG)
+</code></pre>
+<p>例子3： 外部toml文件定义
+NIMMAKE_CFG.toml</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
+hlp.TOML()
+</code></pre>
+<h2 id="toolchain-and-tool-path">toolchain and tool path</h2>
+<p>如果工具链以及全局安装，您无需设置工具链目录。
+系统默认工具链为gcc, 如果您使用的gcc,也无需设置工具链。否则您需要设置工具链及工具链的前缀。</p>
+<pre><code class="language-py">from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
+from nimmake.Helper import Helper
+
+toolpath_armgcc = r&quot;D:\LLVM\arm-none-eabi-gcc14\bin&quot;
+tool = &quot;gcc&quot;
+prefix = &quot;arm-none-eabi-&quot;
+
+print(&quot;== Welcome to  Nimmake! ==&quot;)
+hlp = Helper()
+
+CFG = CORTEX_M4_CFG.clone()
+hlp.Config(CFG)
+
+hlp.Update({&quot;TOOLPATH&quot;: toolpath_armgcc, &quot;TOOL&quot;: tool, &quot;TOOL_PREFIX&quot;: prefix})
+
+hlp.Refresh()
+</code></pre>
 <h2 id="compile-flags">compile flags</h2>
 <p>In your src dir, New file Makefile.py.
 You will set the toolchain info and tool path in this file. and you will designate the CPU architectures. Nimmake will help you get the compile flags.</p>

@@ -1,6 +1,5 @@
 site_name: Nimmake Docs
 site_url: https://nimmake-docs.readthedocs.io/
-use_directory_urls: false
 
 theme:
   name: readthedocs

@@ -1,5 +1,58 @@
 # BasicUsage
 
+## chip
+
+编译依赖芯片的类型，例如arch,fpu float等。
+nimmake内置大量芯片类型，您无需手动设置。您只需要指定芯片类型即可。
+
+例子1: cpu类型定义
+
+```py
+from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
+CFG = CORTEX_M4_CFG.clone()
+hlp.Config(CFG)
+```
+
+例子2： 厂商型号定义
+
+```py
+from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
+CFG = VENDOR_MODEL_OF(Vendor.ST, "STM32F407")
+hlp.Config(CFG)
+```
+
+例子3： 外部toml文件定义
+NIMMAKE_CFG.toml
+
+```py
+from nimmake.datasets import CORTEX_M4_CFG, VENDOR_MODEL_OF, Vendor
+hlp.TOML()
+```
+
+## toolchain and tool path
+
+如果工具链以及全局安装，您无需设置工具链目录。
+系统默认工具链为gcc, 如果您使用的gcc,也无需设置工具链。否则您需要设置工具链及工具链的前缀。
+
+```py
+from nimmake.datasets import CORTEX_M4_CFG, TOOL_OF
+from nimmake.Helper import Helper
+
+toolpath_armgcc = r"D:\LLVM\arm-none-eabi-gcc14\bin"
+tool = "gcc"
+prefix = "arm-none-eabi-"
+
+print("== Welcome to  Nimmake! ==")
+hlp = Helper()
+
+CFG = CORTEX_M4_CFG.clone()
+hlp.Config(CFG)
+
+hlp.Update({"TOOLPATH": toolpath_armgcc, "TOOL": tool, "TOOL_PREFIX": prefix})
+
+hlp.Refresh()
+```
+
 ## compile flags
 
 In your src dir, New file Makefile.py.
