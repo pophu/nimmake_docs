@@ -37,6 +37,13 @@ nmmk -f Nimmake.py
 
 ```
 
+## examples
+
+clone the Nimmake repository:
+git clone https://github.com/pophu/nimmake.git
+
+切换到 samples/<dir> 目录，执行 `nimmake` 即可编译。
+
 ## git
 
 [nimmake](https://github.com/pophu/nimmake)

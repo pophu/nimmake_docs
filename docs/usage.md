@@ -75,9 +75,6 @@ CFG = CORTEX_M4_CFG.clone()
 hlp.Config(CFG)
 # hlp.TOML()
 
-############
-# TOOL
-############
 hlp.Update({"TOOLPATH": toolpath_armgcc, "TOOL": tool, "TOOL_PREFIX": prefix})
 print(TOOL_OF(tool, prefix))
 
@@ -109,7 +106,7 @@ hlp.set_cfg("cpu", "cortex-m4")
    hlp.Update({"TOOLPATH": toolpath_armgcc, "TOOL": tool, "TOOL_PREFIX": prefix})
    print(TOOL_OF(tool, prefix))
 
-# how to add source
+## how to add source
 
 We add source code in a third-party library style. Treat an external directory or your own directory as a party, and add the entire party.
 
