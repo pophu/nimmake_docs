@@ -23,6 +23,7 @@ plugins:
             BasicUsage: 基本使用
             AdvancedUsage: 高级用法
             SourceCode: 源代码
+            FAQ: 常见问题
             Contributing: 贡献
             Params: 参数
             About: 关于
@@ -32,6 +33,7 @@ nav:
   - BasicUsage: usage.md
   - AdvancedUsage: advanced.md
   - SourceCode: source.md
+  - FAQ: faq.md
   - Contributing: contributing.md
   - Params: params.md
   - About: about.md
