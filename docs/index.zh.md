@@ -61,19 +61,67 @@ Nimmake 是一款专为 **ARM** 和 **RISC-V** 架构深度优化的轻量级跨
 
 ## 📦 一分钟快速上手
 
-1. 安装 Nimmake
-   pip install nimmake
+### 1. 安装 Nimmake
 
-2. 验证安装
-   nimmake --version
+```bash
+pip install nimmake
+```
 
-3. 克隆示例项目
-   git clone https://github.com/pophu/nimmake.git
+### 2. 验证安装
 
-   cd nimmake/samples/<dir>
+```bash
+nimmake --version
+```
 
-4. 一键编译
-   nimmake
+### 3. 克隆示例项目
+
+```bash
+git clone https://github.com/pophu/nimmake.git
+cd nimmake/samples/05_arm32
+```
+
+### 4. 一键编译
+
+```bash
+nimmake
+```
+
+就是这么简单！无需配置 Makefile，无需手动管理编译标志。
+
+---
+
+## 📝 Nimmake.py 最小示例
+
+一个完整的 STM32F407 构建脚本只需十几行代码：
+
+```python
+from nimmake.datasets import CORTEX_M4_CFG
+from nimmake.Helper import Helper
+
+hlp = Helper()
+
+# 芯片配置
+CFG = CORTEX_M4_CFG.clone()
+hlp.Config(CFG)
+
+# 工具链配置
+hlp.Update({
+    "TOOLPATH": r"D:\LLVM\arm-none-eabi-gcc14\bin",
+    "TOOL": "gcc",
+    "TOOL_PREFIX": "arm-none-eabi-",
+})
+hlp.Refresh()
+
+# 源码模块（Party 系统）
+core = hlp.Parties("CORE", "src/Core")
+driver = hlp.Parties("Driver", "src/Drivers", third_party="HAL")
+core.DependOn([driver])
+
+# 构建目标
+srcs = ["startup_stm32f407xx.s"]
+t = hlp.Program("test", sources=srcs)
+hlp.DefaultTarget(t)
+```
 
 ---
 
@@ -88,6 +136,26 @@ Nimmake 是一款专为 **ARM** 和 **RISC-V** 架构深度优化的轻量级跨
 
 ---
 
+## 📚 文档导航
+
+| 文档                        | 内容                                                 |
+| --------------------------- | ---------------------------------------------------- |
+| [基本使用](usage.md)        | 芯片配置、工具链设置、编译标志、Party 系统、构建目标 |
+| [高级用法](advanced.md)     | PC 程序、ARM32/RISC-V MCU 构建、多工具链切换         |
+| [Party 系统](party.md)      | 第三方库集成详解，参数说明，内置库列表               |
+| [命令行参数](params.md)     | 所有命令行参数的详细说明                             |
+| [常见问题](faq.md)          | 18 个常见问题解答                                    |
+| [贡献指南](contributing.md) | 如何参与 Nimmake 开发                                |
+
+---
+
 ## 🌟 立即开始
 
 > **Nimmake 让 MCU 固件构建像写 Python 一样简单。**
+
+```bash
+pip install nimmake
+git clone https://github.com/pophu/nimmake.git
+cd nimmake/samples/05_arm32
+nimmake
+```
